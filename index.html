@@ -16,7 +16,7 @@
 <body class="overflow-x-hidden">
 
     <!-- Navbar Starts -->
-    <div id="navbar" class="navbar fixed top-0 w-full z-50 transition-all duration-300 bg-orange-500 text-white">
+    <div id="navbar" class="navbar fixed top-0 w-full z-50 transition-all duration-300 bg-orange-600 text-white px-10">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white">
@@ -36,7 +36,7 @@
                     <li><a>Item 3</a></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl text-white">daisyUI</a>
+            <a href="/" class="text-xl text-white">Unon</a>
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 text-white">
@@ -153,10 +153,68 @@
     </div>
     <!-- food quality ends  -->
 
-    <!-- parallex section starts  -->
-    <div class="h-[500px] bg-fixed bg-center bg-cover flex items-center justify-center" style="background-image: url('/images/banner.jpg');">
-        <h1 class="text-white text-5xl font-bold bg-black bg-opacity-50 px-6 py-3 rounded-lg">Parallax Effect</h1>
+      <!-- FRESH. NUTRITIOUS. SATISFYING. starts  -->
+      <div class="bg-orange-600 flex justify-center items-center py-10">
+        <div class="max-w-7xl text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-[#eee32d] mb-6">FRESH. NUTRITIOUS. SATISFYING.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card w-96 ">
+                    <figure class="px-10 pt-10">
+                      <img
+                        src="/images/select3.png"
+                        alt="Shoes"
+                        class="rounded-xl  w-12 h-12" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title text-[#eee32d] font-bold">CHOOSE YOUR MEALS</h2>
+                      <p class="text-[#eee32d]">Rotating menu of 16 balanced dishes per week, over 50 meals per month.</p>
+                     
+                    </div>
+                  </div>
+                  
+                  <div class="card  w-96 ">
+                    <figure class="px-10 pt-10">
+                      <img
+                        src="/images/select3.png"
+                        alt="Shoes"
+                        class="rounded-xl w-12 h-12" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title text-[#eee32d] font-bold">WE GET COOKING</h2>
+                      <p class="text-[#eee32d]">Whilst you do you. Sit back, relax + let our chefs get the pots simmering.</p>
+                      
+                    </div>
+                  </div>
+                  
+                  <div class="card  w-96 ">
+                    <figure class="px-10 pt-10">
+                      <img
+                        src="/images/select3.png"
+                        alt="Shoes"
+                        class="rounded-xl w-12 h-12" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title text-[#eee32d] font-bold">HEAT, EAT & ENJOY</h2>
+                      <p class="text-[#eee32d]">No prep. No mess. Our meals arrive ready to heat and eat in minutes.</p>
+                      
+                    </div>
+                  </div>
+                
+            </div>
+            <!-- Get Started Button -->
+            <div class="mt-8">
+                <button class="bg-[#eee32d] text-orange-600 font-bold py-3 px-6 rounded-full shadow-lg text-lg">
+                    GET STARTED
+                </button>
+            </div>
+        </div>
     </div>
+    <!-- FRESH. NUTRITIOUS. SATISFYING. ends  -->
+
+    <!-- parallex section starts  -->
+    <!-- <div class="h-[500px] bg-fixed bg-center bg-cover flex items-center justify-center" style="background-image: url('/images/banner.jpg');">
+        <h1 class="text-white text-5xl font-bold bg-black bg-opacity-50 px-6 py-3 rounded-lg">Parallax Effect</h1>
+    </div> -->
     <!-- parallex section ends  -->
 
 
@@ -220,11 +278,12 @@
                 
             </div>
             <!-- Pagination and Navigation -->
-           <div class="mt-6">
-            <div class="swiper-pagination"></div>
-           </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="mt-6">
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="swiper-button-next !text-orange-500"></div>
+              <div class="swiper-button-prev !text-orange-500"></div>
+              
         </div>
     
         <div class="text-center mt-6">
@@ -317,7 +376,7 @@
    <!-- footer ends  -->
 
     <!-- JavaScript for Sticky Navbar -->
-    <script>
+    <!-- <script>
         window.addEventListener("scroll", function () {
             var navbar = document.getElementById("navbar");
             if (window.scrollY > 50) {
@@ -326,7 +385,7 @@
                 navbar.style.backgroundColor = "rgb(220, 77, 1)"; // Solid Orange
             }
         });
-    </script>
+    </script> -->
 
     <!-- swiper js  -->
 
