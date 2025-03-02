@@ -47,23 +47,56 @@
     </script>
 </head>
 <body class="bg-[#FDF4E7] font-sans">
-    <nav class="bg-[#FF5722] text-white flex justify-between items-center px-6 py-3">
-        <div class="text-2xl font-bold">SIMMER.</div>
-        <div class="flex space-x-4">
-            <a href="#" class="hover:underline">WHO WE ARE</a>
-            <a href="#" class="hover:underline">WHAT WE DO</a>
+    <!-- Navbar Starts -->
+    <div id="navbar" class="navbar fixed top-0 w-full z-50 transition-all duration-300 bg-orange-600 text-white px-10">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li><a>Item 1</a></li>
+                    <li>
+                        <a>Parent</a>
+                        <ul class="p-2">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Item 3</a></li>
+                </ul>
+            </div>
+            <a href="/" class="text-xl text-white">Unon</a>
         </div>
-        <div class="space-x-4">
-            <button class="bg-yellow-400 px-4 py-2 rounded font-bold">GET STARTED</button>
-            <button class="border border-white px-4 py-2 rounded">LOG IN</button>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-white">
+                <li><a>Item 1</a></li>
+                <li>
+                    <details>
+                        <summary>Parent</summary>
+                        <ul class="p-2">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a>Item 3</a></li>
+            </ul>
         </div>
-    </nav>
+        <div class="navbar-end">
+            <a class="btn bg-white text-black">Button</a>
+        </div>
+    </div>
+    <!-- Navbar Ends -->
     
-    <div class="bg-purple-700 text-white text-center py-2 text-sm">
+    <!-- Sticky Discount Banner -->
+    <div class="sticky top-16 z-40 bg-purple-700 text-white text-center py-2 text-sm">
         24% OFF your first 4 orders • 10% OFF next 6 orders applied! ✅ You have 30:00 minutes to use this offer
     </div>
     
-    <section class="text-center py-8">
+    <section class="text-center py-8 mt-20">
         <h1 class="text-3xl font-bold text-[#FF5722]">EXPLORE OUR FLEXIBLE WEEKLY MENU</h1>
     </section>
     
@@ -120,14 +153,14 @@
     
         <div class="text-center mt-6">
             <button id="showMoreBtnLunch" class="bg-red-500 text-white px-6 py-2 rounded-full font-bold hover:bg-red-600" onclick="toggleLunchItems()">SHOW MORE</button>
-            <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 get-started-btn hidden">GET STARTED</button>
+            <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 get-started-btn hidden"><a href="/chooseMeal.html">GET STARTED</a></button>
         </div>
     </div>
 
     <!-- Breakfast Section -->
     <div class="bg-cream p-6 menu-section breakfast-section">
         <h1 class="text-3xl font-bold text-[#FF5722] text-center">Breakfast</h1>
-        <div class="grid grid-cols-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             <div class="p-4">
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                     <img src="/images/food.jpg" alt="Thai Coconut Curry" class="w-full h-60 object-cover">
@@ -177,7 +210,7 @@
     
         <div class="text-center mt-6">
             <button id="showMoreBtnBreakfast" class="bg-red-500 text-white px-6 py-2 rounded-full font-bold hover:bg-red-600" onclick="toggleBreakfastItems()">SHOW MORE</button>
-            <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 get-started-btn hidden">GET STARTED</button>
+            <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 get-started-btn hidden"><a href="/chooseMeal.html">GET STARTED</a></button>
         </div>
     </div>
 
