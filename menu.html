@@ -4,7 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simmer Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Function to toggle hidden items for Lunch
+        function toggleLunchItems() {
+            const hiddenItems = document.querySelectorAll('.lunch-section .hidden-item');
+            hiddenItems.forEach(item => item.classList.toggle('hidden'));
+            document.getElementById('showMoreBtnLunch').classList.add('hidden');
+        }
+
+        // Function to toggle hidden items for Breakfast
+        function toggleBreakfastItems() {
+            const hiddenItems = document.querySelectorAll('.breakfast-section .hidden-item');
+            hiddenItems.forEach(item => item.classList.toggle('hidden'));
+            document.getElementById('showMoreBtnBreakfast').classList.add('hidden');
+        }
+
+        // Function to adjust the "GET STARTED" button visibility
+        function adjustGetStartedButton() {
+            const lunchSection = document.querySelector('.lunch-section');
+            const breakfastSection = document.querySelector('.breakfast-section');
+            const getStartedButtons = document.querySelectorAll('.get-started-btn');
+
+            // Hide all "GET STARTED" buttons initially
+            getStartedButtons.forEach(button => button.classList.add('hidden'));
+
+            if (lunchSection && breakfastSection) {
+                // Both sections are present, show the button under Breakfast
+                breakfastSection.querySelector('.get-started-btn').classList.remove('hidden');
+            } else if (lunchSection) {
+                // Only Lunch section is present, show the button under Lunch
+                lunchSection.querySelector('.get-started-btn').classList.remove('hidden');
+            } else if (breakfastSection) {
+                // Only Breakfast section is present, show the button under Breakfast
+                breakfastSection.querySelector('.get-started-btn').classList.remove('hidden');
+            }
+        }
+
+        // Call the function on page load
+        window.onload = adjustGetStartedButton;
+    </script>
 </head>
 <body class="bg-[#FDF4E7] font-sans">
     <nav class="bg-[#FF5722] text-white flex justify-between items-center px-6 py-3">
@@ -27,62 +67,122 @@
         <h1 class="text-3xl font-bold text-[#FF5722]">EXPLORE OUR FLEXIBLE WEEKLY MENU</h1>
     </section>
     
-    <div id="menu-items" class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 md:px-20">
-        <div class="bg-white shadow-lg rounded-lg">
-            <img src="/images/food.jpg" alt="Thai Coconut Curry" class="w-full h-72 object-cover rounded">
-
-            <div class="p-4 bg-yellow-400">
-                <h3 class="font-bold">THAI COCONUT CURRY</h3>
-                <p class="text-sm">453 kcal | 41.3g protein</p>
+    <!-- Lunch Section -->
+    <div class="bg-cream p-6 menu-section lunch-section">
+        <h1 class="text-3xl font-bold text-[#FF5722] text-center">Lunch</h1>
+        <div class="grid grid-cols-4">
+            <div class="p-4">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/food.jpg" alt="Thai Coconut Curry" class="w-full h-60 object-cover">
+                    <div class="p-4 bg-yellow-400">
+                        <h3 class="font-bold">THAI COCONUT CURRY</h3>
+                        <p class="text-sm">453 kcal | 41.3g protein</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/food3.jpg" alt="Jerk Chicken" class="w-full h-60 object-cover">
+                    <div class="p-4 bg-yellow-400">
+                        <h3 class="font-bold">JERK CHICKEN</h3>
+                        <p class="text-sm">456 kcal | 40.2g protein</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/food4.webp" alt="Turkish Lamb Kofte" class="w-full h-60 object-cover">
+                    <div class="p-4 bg-yellow-400">
+                        <h3 class="font-bold">TURKISH LAMB KOFTE</h3>
+                        <p class="text-sm">490 kcal | 37.7g protein</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/food4.webp" alt="Turkish Lamb Kofte" class="w-full h-60 object-cover">
+                    <div class="p-4 bg-yellow-400">
+                        <h3 class="font-bold">TURKISH LAMB KOFTE</h3>
+                        <p class="text-sm">490 kcal | 37.7g protein</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 hidden-item hidden">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/food5.jpg" alt="Beef Nasi Goreng" class="w-full h-60 object-cover">
+                    <div class="p-4 bg-yellow-400">
+                        <h3 class="font-bold">BEEF NASI GORENG</h3>
+                        <p class="text-sm">465 kcal | 38.3g protein</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="bg-yellow-400 p-4 rounded-lg">
-            <img src="https://via.placeholder.com/300" alt="Beef Bolognese" class="w-full rounded">
-            <h2 class="text-lg font-bold mt-2">BEEF BOLOGNESE</h2>
-            <p class="text-sm">460 kcal | 36g protein</p>
-        </div>
-        <div class="bg-yellow-400 p-4 rounded-lg">
-            <img src="https://via.placeholder.com/300" alt="Fajita Burrito" class="w-full rounded">
-            <h2 class="text-lg font-bold mt-2">FAJITA BURRITO</h2>
-            <p class="text-sm">485 kcal | 37g protein</p>
-        </div>
-        <div class="bg-yellow-400 p-4 rounded-lg hidden">
-            <img src="https://via.placeholder.com/300" alt="Teriyaki Chicken" class="w-full rounded">
-            <h2 class="text-lg font-bold mt-2">TERIYAKI CHICKEN</h2>
-            <p class="text-sm">470 kcal | 35g protein</p>
-        </div>
-        <div class="bg-yellow-400 p-4 rounded-lg hidden">
-            <img src="https://via.placeholder.com/300" alt="Salmon Rice Bowl" class="w-full rounded">
-            <h2 class="text-lg font-bold mt-2">SALMON RICE BOWL</h2>
-            <p class="text-sm">480 kcal | 40g protein</p>
-        </div>
-        <div class="bg-yellow-400 p-4 rounded-lg hidden">
-            <img src="https://via.placeholder.com/300" alt="BBQ Chicken" class="w-full rounded">
-            <h2 class="text-lg font-bold mt-2">BBQ CHICKEN</h2>
-            <p class="text-sm">490 kcal | 42g protein</p>
+    
+        <div class="text-center mt-6">
+            <button id="showMoreBtnLunch" class="bg-red-500 text-white px-6 py-2 rounded-full font-bold hover:bg-red-600" onclick="toggleLunchItems()">SHOW MORE</button>
+            <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 get-started-btn hidden">GET STARTED</button>
         </div>
     </div>
+
+    <!-- Breakfast Section -->
+    <div class="bg-cream p-6 menu-section breakfast-section">
+        <h1 class="text-3xl font-bold text-[#FF5722] text-center">Breakfast</h1>
+        <div class="grid grid-cols-4">
+            <div class="p-4">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/food.jpg" alt="Thai Coconut Curry" class="w-full h-60 object-cover">
+                    <div class="p-4 bg-yellow-400">
+                        <h3 class="font-bold">THAI COCONUT CURRY</h3>
+                        <p class="text-sm">453 kcal | 41.3g protein</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/food3.jpg" alt="Jerk Chicken" class="w-full h-60 object-cover">
+                    <div class="p-4 bg-yellow-400">
+                        <h3 class="font-bold">JERK CHICKEN</h3>
+                        <p class="text-sm">456 kcal | 40.2g protein</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/food4.webp" alt="Turkish Lamb Kofte" class="w-full h-60 object-cover">
+                    <div class="p-4 bg-yellow-400">
+                        <h3 class="font-bold">TURKISH LAMB KOFTE</h3>
+                        <p class="text-sm">490 kcal | 37.7g protein</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/food4.webp" alt="Turkish Lamb Kofte" class="w-full h-60 object-cover">
+                    <div class="p-4 bg-yellow-400">
+                        <h3 class="font-bold">TURKISH LAMB KOFTE</h3>
+                        <p class="text-sm">490 kcal | 37.7g protein</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 hidden-item hidden">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/food5.jpg" alt="Beef Nasi Goreng" class="w-full h-60 object-cover">
+                    <div class="p-4 bg-yellow-400">
+                        <h3 class="font-bold">BEEF NASI GORENG</h3>
+                        <p class="text-sm">465 kcal | 38.3g protein</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     
-    <div class="text-center py-4">
-        <button id="show-more" class="bg-[#FF5722] text-white px-4 py-2 rounded">Show More</button>
+        <div class="text-center mt-6">
+            <button id="showMoreBtnBreakfast" class="bg-red-500 text-white px-6 py-2 rounded-full font-bold hover:bg-red-600" onclick="toggleBreakfastItems()">SHOW MORE</button>
+            <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 get-started-btn hidden">GET STARTED</button>
+        </div>
     </div>
-    
+
     <footer class="text-center py-6 text-gray-600">
         Enjoy flavorful meals with no fuss. Pick your dishes, skip weeks, cancel anytime.
     </footer>
-    
-    <script>
-        document.getElementById("show-more").addEventListener("click", function() {
-            const hiddenItems = document.querySelectorAll("#menu-items .hidden");
-            hiddenItems.forEach((item, index) => {
-                if (index < 3) {
-                    item.classList.remove("hidden");
-                }
-            });
-            if (document.querySelectorAll("#menu-items .hidden").length === 0) {
-                this.classList.add("hidden");
-            }
-        });
-    </script>
 </body>
 </html>
