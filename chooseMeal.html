@@ -24,12 +24,12 @@
 <div id="navbar" class="navbar fixed top-0 w-full z-50 transition-all duration-300 bg-base-200 text-white px-10">
     <div class="navbar-start">
         <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-orange-600">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
             </div>
-            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black">
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-orange-600">
                 <li><a>What We Do</a></li>
                 <li>
                     <a>Parent</a>
@@ -39,17 +39,17 @@
                     </ul>
                 </li>
                 <li><a>Item 3</a></li>
-                <li><a href="/auth/login.html" class="font-semibold">Log In</a></li>
-                <li><a href="/chooseMeal.html" class="bg-orange-600 text-white p-1 px-2 rounded-full font-semibold">Get Started</a></li>
+                <li><a href="/auth/login.html" class="font-semibold text-white">Log In</a></li>
+                <li><a href="/chooseMeal.html" class="bg-white text-orange-600 p-1 px-2 rounded-full font-semibold">Get Started</a></li>
             </ul>
         </div>
-        <a href="/" class="text-xl text-orange-600 font-bold">
-          <img src="/images/logo/logo.png" alt="logo" class="w-24 h-16">
+        <a href="/" class="text-xl text-white font-bold">
+          <img src="/images/logo/logo.png" alt="logo" class="w-24 h-14">
         </a>
     </div>
     <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1 text-xl text-orange-600">
-            <li><a>What We Do</a></li>
+        <ul class="menu menu-horizontal px-1 text-orange-600 text-lg font-semibold">
+            <li><a>What We</a></li>
             <li>
                 <details>
                     <summary>Parent</summary>
@@ -63,7 +63,7 @@
         </ul>
     </div>
     <div class="navbar-end hidden lg:flex gap-4">
-        <a href="/auth/login.html" class="text-xl text-orange-600 font-semibold">Log In</a>
+        <a href="/auth/login.html" class="text-xl font-semibold text-orange-600">Log In</a>
         <a href="/chooseMeal.html" class="bg-orange-600 text-white p-1 px-2 rounded-full text-xl font-semibold">Get Started</a>
     </div>
   </div>
@@ -225,7 +225,12 @@
         </div>
         
         <!-- Select Plan Button -->
-        <button class="bg-orange-600 text-white p-3 w-full mt-4 rounded-full hover:bg-orange-600">SELECT PLAN</button>
+        <a href="/menu_select.html">
+            <button class="bg-orange-600 text-white p-3 w-full mt-4 rounded-full hover:bg-orange-700">
+              SELECT PLAN
+            </button>
+          </a>
+          
     </div>
 
     <!-- FAQ Section -->
