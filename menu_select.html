@@ -169,13 +169,7 @@
             <h2 id="modal-title" class="text-lg font-bold mt-4"></h2>
             <p id="modal-description" class="mt-2 text-sm text-gray-600"></p>
             <p id="modal-calories" class="text-xs mt-1"></p>
-            <div class="mt-4">
-                <h3 class="font-bold">Cart Details</h3>
-                <div id="cart-details" class="text-sm text-gray-600">
-                    <!-- Cart items will be dynamically added here -->
-                </div>
-                <p class="text-sm text-gray-600 mt-2">Total Items: <span id="cart-size">0</span></p>
-            </div>
+           
             <button onclick="closeModal()" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Close</button>
         </div>
     </div>
@@ -226,14 +220,7 @@
 
         function updateCartDisplay() {
             // Update modal cart details
-            const cartDetails = document.getElementById("cart-details");
-            cartDetails.innerHTML = cart.map(item => `
-                <div class="flex justify-between">
-                    <span>${item.title}</span>
-                    <span>Qty: ${item.quantity}</span>
-                </div>
-            `).join('');
-            document.getElementById("cart-size").textContent = cart.length;
+       
 
             // Update sticky cart details
             const stickyCartItems = document.getElementById("sticky-cart-items");
