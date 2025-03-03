@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS and DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Simmer Menu</title>
+</head>
+<body class="bg-yellow-50">
+    <!-- Navbar Starts -->
+    <div id="navbar" class="navbar fixed top-0 w-full z-50 transition-all duration-300 bg-orange-600 text-white">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li><a>Item 1</a></li>
+                    <li>
+                        <a>Parent</a>
+                        <ul class="p-2">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Item 3</a></li>
+                </ul>
+            </div>
+            <a href="/" class="text-xl text-white">Unon</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-white">
+                <li><a>Home</a></li>
+                <li>
+                    <details>
+                        <summary>Menu</summary>
+                        <ul class="p-2">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a>Pricing</a></li>
+                <li><a>FAQ</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn bg-white text-black">Sign In</a>
+        </div>
+    </div>
+    <!-- Navbar Ends -->
+
+    <!-- Progress Tracker -->
+    <div class="bg-[#A40032] p-4 flex items-center justify-center text-white mt-16">
+        <div class="w-full max-w-4xl flex items-center justify-between text-xs md:text-sm">
+            <div class="flex flex-col items-center">
+                <div class="w-3 h-3 md:w-4 md:h-4 bg-yellow-400 rounded-full"></div>
+                <span class="text-yellow-400 font-bold">Plan</span>
+            </div>
+            <div class="flex-grow border-t-2 border-yellow-300 mx-2"></div>
+            <div class="flex flex-col items-center">
+                <div class="w-3 h-3 md:w-4 md:h-4 bg-yellow-300 rounded-full"></div>
+                <span class="text-yellow-300">Details</span>
+            </div>
+            <div class="flex-grow border-t-2 border-yellow-300 mx-2"></div>
+            <div class="flex flex-col items-center">
+                <div class="w-3 h-3 md:w-4 md:h-4 bg-yellow-300 rounded-full"></div>
+                <span class="text-yellow-300">Meals</span>
+            </div>
+            <div class="flex-grow border-t-2 border-yellow-300 mx-2"></div>
+            <div class="flex flex-col items-center">
+                <div class="w-3 h-3 md:w-4 md:h-4 bg-yellow-300 rounded-full"></div>
+                <span class="text-yellow-300">Address</span>
+            </div>
+            <div class="flex-grow border-t-2 border-yellow-300 mx-2"></div>
+            <div class="flex flex-col items-center">
+                <div class="w-3 h-3 md:w-4 md:h-4 bg-yellow-300 rounded-full"></div>
+                <span class="text-yellow-300">Payment</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Section -->
+    <div class="bg-orange-500 text-white p-2">
+        <div class="text-center font-semibold text-lg">Menu changes weekly with 50+ options per month</div>
+        <div class="mt-4 gap-4 p-2 border-2 border-base-300 rounded-lg">
+            <div class="flex justify-between">
+                <p>Protein Preference</p>
+                <select class="text-yellow-300 rounded-md bg-transparent">
+                    <option>Meat & Vegan</option>
+                    <option>Meat Only</option>
+                    <option>Vegan Only</option>
+                </select>
+            </div>
+            <div class="flex justify-between">
+                <p>Portion Size</p>
+                <p class="text-yellow-300">Primary</p>
+            </div>
+            <div class="flex justify-between">
+                <p>Main Meals</p>
+                <p class="text-yellow-300">Primary</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meal Cards Section -->
+    <div class="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-yellow-400 shadow-lg rounded-lg overflow-hidden">
+            <div class="relative">
+                <img src="/images/food.jpg" alt="Jerk Chicken" class="w-full h-40 object-cover">
+                <span class="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">Popular</span>
+                <span class="absolute top-2 right-2 bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded-full">DF</span>
+            </div>
+            <div class="p-4 bg-yellow-400 text-center">
+                <h3 class="font-bold text-sm">JERK CHICKEN WITH BAKED PLANTAIN & HOMEMADE JERK SAUCE</h3>
+                <p class="text-xs mt-1">406 kcal | 40.2g protein</p>
+                <div class="flex items-center justify-center mt-3">
+                    <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg">-</button>
+                    <span class="mx-3 text-lg">0</span>
+                    <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg">+</button>
+                </div>
+                <p class="mt-2 text-xs underline cursor-pointer" onclick="openModal('Jerk Chicken', '/images/food.jpg', 'A delicious Jamaican dish featuring grilled jerk chicken, served with baked plantain and homemade jerk sauce. Packed with 40.2g protein!', '406 kcal | 40.2g protein')">More Info</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-yellow-400 shadow-lg rounded-lg overflow-hidden">
+            <div class="relative">
+                <img src="/images/food3.jpg" alt="Food 2" class="w-full h-40 object-cover">
+                <span class="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">Special</span>
+                <span class="absolute top-2 right-2 bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded-full">DF</span>
+            </div>
+            <div class="p-4 bg-yellow-400 text-center">
+                <h3 class="font-bold text-sm">Food 2</h3>
+                <p class="text-xs mt-1">406 kcal | 40.2g protein</p>
+                <div class="flex items-center justify-center mt-3">
+                    <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg">-</button>
+                    <span class="mx-3 text-lg">0</span>
+                    <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg">+</button>
+                </div>
+                <p class="mt-2 text-xs underline cursor-pointer" onclick="openModal('Food 2', '/images/food3.jpg', 'A special dish with unique flavors and high protein content.', '406 kcal | 40.2g protein')">More Info</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal (Hidden by Default) -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <img id="modal-image" src="" alt="Modal Image" class="w-full h-40 object-cover rounded-lg">
+            <h2 id="modal-title" class="text-lg font-bold mt-4"></h2>
+            <p id="modal-description" class="mt-2 text-sm text-gray-600"></p>
+            <p id="modal-calories" class="text-xs mt-1"></p>
+            <div class="mt-4">
+                <h3 class="font-bold">Cart Details</h3>
+                <p id="cart-details" class="text-sm text-gray-600">No items in cart.</p>
+            </div>
+            <button onclick="closeModal()" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Close</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function openModal(title, image, description, calories) {
+            document.getElementById("modal").classList.remove("hidden");
+            document.getElementById("modal-title").textContent = title;
+            document.getElementById("modal-image").src = image;
+            document.getElementById("modal-description").textContent = description;
+            document.getElementById("modal-calories").textContent = calories;
+
+            // Update cart details
+            const cartDetails = cart.length > 0 ? cart.map(item => `${item.title} (Qty: ${item.quantity})`).join(', ') : "No items in cart.";
+            document.getElementById("cart-details").textContent = cartDetails;
+        }
+
+        function closeModal() {
+            document.getElementById("modal").classList.add("hidden");
+        }
+
+        function addToCart(title) {
+            const existingItem = cart.find(item => item.title === title);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ title, quantity: 1 });
+            }
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartDetails = cart.length > 0 ? cart.map(item => `${item.title} (Qty: ${item.quantity})`).join(', ') : "No items in cart.";
+            document.getElementById("cart-details").textContent = cartDetails;
+        }
+    </script>
+</body>
+</html>
