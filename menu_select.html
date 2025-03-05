@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Tailwind CSS and DaisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Unon Menu</title>
 </head>
@@ -111,8 +111,6 @@
         </div>
     </div>
 
-   
-
     <!-- Meal Cards Section -->
     <div class="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
         <!-- Card 1 -->
@@ -153,8 +151,9 @@
             </div>
         </div>
     </div>
-     <!-- Sticky Cart Section -->
-     <div id="sticky-cart" class="sticky top-20 bg-white shadow-lg rounded-lg p-4 mx-4 mt-4 hidden">
+
+    <!-- Sticky Cart Section -->
+    <div id="sticky-cart" class="sticky bottom-0 bg-white shadow-lg rounded-lg p-4 mx-4 mb-4 hidden">
         <h3 class="font-bold">Cart Details</h3>
         <div id="sticky-cart-items" class="text-sm text-gray-600">
             <!-- Cart items will be dynamically added here -->
@@ -169,7 +168,6 @@
             <h2 id="modal-title" class="text-lg font-bold mt-4"></h2>
             <p id="modal-description" class="mt-2 text-sm text-gray-600"></p>
             <p id="modal-calories" class="text-xs mt-1"></p>
-           
             <button onclick="closeModal()" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Close</button>
         </div>
     </div>
@@ -183,8 +181,6 @@
             document.getElementById("modal-image").src = image;
             document.getElementById("modal-description").textContent = description;
             document.getElementById("modal-calories").textContent = calories;
-
-            // Update cart details
             updateCartDisplay();
         }
 
@@ -219,24 +215,17 @@
         }
 
         function updateCartDisplay() {
-            // Update modal cart details
-       
-
-            // Update sticky cart details
             const stickyCartItems = document.getElementById("sticky-cart-items");
             stickyCartItems.innerHTML = cart.map(item => `
-
                 <div class="flex justify-between">
                     <span>${item.title}</span>
                     <span>Qty: ${item.quantity}</span>
                 </div>
-
             `).join('');
             document.getElementById("sticky-cart-size").textContent = cart.length;
 
-            // Show or hide sticky cart based on cart size
             const stickyCart = document.getElementById("sticky-cart");
-            if (cart.length > 0) {
+            if (cart.length > 0 && cart.some(item => item.quantity > 0)) {
                 stickyCart.classList.remove("hidden");
             } else {
                 stickyCart.classList.add("hidden");
