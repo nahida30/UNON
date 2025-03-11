@@ -6,6 +6,20 @@
     <!-- Tailwind CSS and DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'custom-orange': '#e84d24',
+                'custom-green-bg': '#e1f0d8',
+                'custom-beige': '#fdf6e9',
+              }
+            }
+          }
+        }
+      </script>
     <title>Payment Page</title>
 </head>
 <body class="bg-yellow-50">
@@ -88,107 +102,171 @@
         </div>
     </div>
 
-    <!-- Payment Page Content -->
-    <div class="container mx-auto p-6 max-w-7xl">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Order Summary (Left Side) -->
-            <div class="bg-white shadow-lg rounded-lg p-6">
-                <h2 class="text-2xl font-bold text-orange-600 mb-6">Order Summary</h2>
-                <div class="space-y-4">
-                    <div class="flex justify-between">
-                        <span class="text-gray-700">Jerk Chicken</span>
-                        <span class="text-gray-700">$12.99</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-gray-700">Food 2</span>
-                        <span class="text-gray-700">$10.99</span>
-                    </div>
-                    <div class="border-t border-gray-300 pt-4">
-                        <div class="flex justify-between">
-                            <span class="font-semibold text-gray-700">Subtotal</span>
-                            <span class="font-semibold text-gray-700">$23.98</span>
-                        </div>
-                        <div class="flex justify-between mt-2">
-                            <span class="font-semibold text-gray-700">Tax</span>
-                            <span class="font-semibold text-gray-700">$1.92</span>
-                        </div>
-                        <div class="flex justify-between mt-2">
-                            <span class="font-semibold text-gray-700">Total</span>
-                            <span class="font-semibold text-orange-600">$25.90</span>
-                        </div>
-                    </div>
+   
+    <!-- order summary  -->
+    <div class="bg-custom-beige p-4">
+        <div class="flex flex-col md:flex-row gap-10 max-w-7xl mx-auto">
+            <!-- Left Column - Order Summary -->
+            <div class="flex-1">
+              <h2 class="text-2xl font-bold text-custom-orange mb-4">ORDER SUMMARY</h2>
+              
+              <!-- Price Per Meal -->
+              <div class="bg-custom-green-bg p-3 mb-4 rounded flex items-center">
+                <svg class="text-green-600 mr-2 h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-sm">Price Per Meal:</span>
+                <span class="text-sm line-through ml-1">£9.99</span>
+                <span class="ml-1 font-semibold">£8.17</span>
+              </div>
+              
+              <!-- Order Details -->
+              <div class="border border-gray-200 rounded bg-white">
+                <div class="flex justify-between p-3 border-b border-gray-200">
+                  <span>Main Meals (12)</span>
+                  <span class="font-semibold">£92.05</span>
                 </div>
+                
+                <div class="flex justify-between p-3 border-b border-gray-200 bg-[#f8f8f8]">
+                  <div class="flex items-center">
+                    <span>Discount</span>
+                    <svg class="h-4 w-4 ml-1 text-green-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21 6L9 18L3 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <span class="font-semibold text-green-600">£10.04 OFF</span>
+                </div>
+                
+                <div class="flex justify-between p-3 border-b border-gray-200">
+                  <span>Delivery (Free On 1st Order)</span>
+                  <span class="font-semibold text-green-600">£0.00 FREE</span>
+                </div>
+                
+                <div class="flex justify-between p-3">
+                  <span class="font-semibold">Total</span>
+                  <div>
+                    <span class="text-sm line-through text-gray-500 mr-1">£92.05</span>
+                    <span class="font-bold">£82.01</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Delivery Date -->
+              <div class="mt-4 mb-4">
+                <span class="text-sm text-gray-600">Delivery Date</span>
+                <div class="font-semibold">Monday, 24th July</div>
+              </div>
+              
+              <!-- Continue Button -->
+              <button class="w-full bg-custom-orange text-white py-3 rounded font-semibold mb-4">
+                CONTINUE TO PAYMENT
+              </button>
+              
+              <!-- Discount Code -->
+              <div class="mb-4">
+                <label class="text-sm text-gray-600 block mb-1">Discount Code</label>
+                <div class="relative">
+                  <input 
+                    type="text" 
+                    value="CHEF25" 
+                    class="w-full border border-gray-300 rounded p-2 pr-10"
+                    readonly
+                  />
+                  <div class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-green-500 rounded-full p-0.5">
+                    <svg class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <!-- Payment Options (Right Side) -->
-            <div class="bg-white shadow-lg rounded-lg p-6">
-                <h2 class="text-2xl font-bold text-orange-600 mb-6">Payment Details</h2>
-                <form class="space-y-4">
-                    <!-- Card Number -->
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Card Number</label>
-                        <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="1234 5678 9012 3456">
-                    </div>
-
-                    <!-- Expiration Date and CVV -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">Expiration Date</label>
-                            <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="MM/YY">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">CVV</label>
-                            <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="123">
-                        </div>
-                    </div>
-
-                    <!-- Billing Address -->
-                    <div>
-                        <h3 class="text-lg font-semibold text-orange-600 mb-4">Billing Address</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700">First Name</label>
-                                <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="John">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700">Last Name</label>
-                                <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Doe">
-                            </div>
-                        </div>
-                        <div class="mt-4">
-                            <label class="block text-sm font-medium text-gray-700">Address</label>
-                            <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="123 Main St">
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700">City</label>
-                                <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="New York">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700">Zip Code</label>
-                                <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="10001">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="mt-6">
-                        <button type="submit" class="w-full bg-orange-600 text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-orange-700 transition-colors">
-                            Pay Now
-                        </button>
-                    </div>
-                </form>
+            
+            <!-- Right Column - Your Box -->
+            <div class="flex-1 border border-gray-200 rounded bg-white">
+              <div class="flex justify-between items-center p-3 border-b border-gray-200">
+                <h3 class="text-lg font-semibold text-custom-orange">YOUR BOX</h3>
+                <a href="#" class="text-custom-orange text-sm">edit order</a>
+              </div>
+              
+              <div class="overflow-auto max-h-[400px]">
+                <!-- Meal Item 1 -->
+                <div class="flex p-3 border-b border-gray-200">
+                  <div class="w-16 h-16 relative mr-3 rounded-full overflow-hidden">
+                    <img 
+                      src="/images/food.jpg" 
+                      alt="Jerk Chicken" 
+                      class="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div>
+                    <div class="font-semibold">Jerk Chicken</div>
+                    <div class="text-xs text-gray-600">405 kcal / 40g Protein</div>
+                  </div>
+                </div>
+                
+                <!-- Meal Item 2 -->
+                <div class="flex p-3 border-b border-gray-200">
+                  <div class="w-16 h-16 relative mr-3 rounded-full overflow-hidden">
+                    <img 
+                      src="/images/food2.jpg" 
+                      alt="Peri Chicken" 
+                      class="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div>
+                    <div class="font-semibold">Peri CHICKEN</div>
+                    <div class="text-xs text-gray-600">421 kcal / 45g Protein</div>
+                  </div>
+                </div>
+                
+                <!-- Meal Item 3 -->
+                <div class="flex p-3 border-b border-gray-200">
+                  <div class="w-16 h-16 relative mr-3 rounded-full overflow-hidden">
+                    <img 
+                      src="/images/food3.jpg" 
+                      alt="Lamb Koftas" 
+                      class="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div>
+                    <div class="font-semibold">Lamb Koftas</div>
+                    <div class="text-xs text-gray-600">447 kcal / 33g Protein</div>
+                  </div>
+                </div>
+                
+                <!-- Meal Item 4 -->
+                <div class="flex p-3 border-b border-gray-200">
+                  <div class="w-16 h-16 relative mr-3 rounded-full overflow-hidden">
+                    <img 
+                      src="/images/food4.webp" 
+                      alt="Char Siu Chicken" 
+                      class="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div>
+                    <div class="font-semibold">Char Siu Chicken</div>
+                    <div class="text-xs text-gray-600">449 kcal / 38g Protein</div>
+                  </div>
+                </div>
+                
+                <!-- Meal Item 5 -->
+                <div class="flex p-3">
+                  <div class="w-16 h-16 relative mr-3 rounded-full overflow-hidden">
+                    <img 
+                      src="/images/food5.jpg" 
+                      alt="Middle Eastern Baharat Baked Chicken" 
+                      class="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div>
+                    <div class="font-semibold">Middle Eastern Baharat Baked Chicken</div>
+                    <div class="text-xs text-gray-600">472 kcal / 40g Protein</div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
     </div>
-
-    <!-- Sticky Cart Section -->
-    <div id="sticky-cart" class="sticky bottom-0 bg-white shadow-lg rounded-lg p-4 mx-4 mb-4 hidden">
-        <h3 class="font-bold">Cart Details</h3>
-        <div id="sticky-cart-items" class="text-sm text-gray-600">
-            <!-- Cart items will be dynamically added here -->
-        </div>
-        <p class="text-sm text-gray-600 mt-2">Total Items: <span id="sticky-cart-size">0</span></p>
-    </div>
+   
 </body>
 </html>
