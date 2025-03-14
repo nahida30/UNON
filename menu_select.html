@@ -111,44 +111,164 @@
         </div>
     </div>
 
-    <!-- Meal Cards Section -->
-    <div class="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- Card 1 -->
-        <div class="bg-yellow-400 shadow-lg rounded-lg overflow-hidden">
-            <div class="relative">
-                <img src="/images/food.jpg" alt="Jerk Chicken" class="w-full h-40 object-cover">
-                <span class="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">Popular</span>
-                <span class="absolute top-2 right-2 bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded-full">DF</span>
-            </div>
-            <div class="p-4 bg-yellow-400 text-center">
-                <h3 class="font-bold text-sm">JERK CHICKEN WITH BAKED PLANTAIN & HOMEMADE JERK SAUCE</h3>
-                <p class="text-xs mt-1">406 kcal | 40.2g protein</p>
-                <div class="flex items-center justify-center mt-3">
-                    <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="decreaseQuantity('Jerk Chicken')">-</button>
-                    <span id="quantity-Jerk Chicken" class="mx-3 text-lg">0</span>
-                    <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="increaseQuantity('Jerk Chicken')">+</button>
-                </div>
-                <p class="mt-2 text-xs underline cursor-pointer" onclick="openModal('Jerk Chicken', '/images/food.jpg', 'A delicious Jamaican dish featuring grilled jerk chicken, served with baked plantain and homemade jerk sauce. Packed with 40.2g protein!', '406 kcal | 40.2g protein')">More Info</p>
-            </div>
-        </div>
+    <!-- Meal Cards lunch Section -->
+     <div>
 
-        <!-- Card 2 -->
-        <div class="bg-yellow-400 shadow-lg rounded-lg overflow-hidden">
-            <div class="relative">
-                <img src="/images/food3.jpg" alt="Food 2" class="w-full h-40 object-cover">
-                <span class="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">Special</span>
-                <span class="absolute top-2 right-2 bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded-full">DF</span>
-            </div>
-            <div class="p-4 bg-yellow-400 text-center">
-                <h3 class="font-bold text-sm">Food 2</h3>
-                <p class="text-xs mt-1">406 kcal | 40.2g protein</p>
-                <div class="flex items-center justify-center mt-3">
-                    <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="decreaseQuantity('Food 2')">-</button>
-                    <span id="quantity-Food 2" class="mx-3 text-lg">0</span>
-                    <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="increaseQuantity('Food 2')">+</button>
+         <h1 class="text-3xl font-bold text-[#FF5722] text-center">Lunch</h1>
+         <div class="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+             <!-- Card 1 -->
+             <div class="bg-yellow-400 shadow-lg rounded-lg overflow-hidden">
+                 <div class="relative">
+                     <img src="/images/food.jpg" alt="Jerk Chicken" class="w-full h-40 object-cover">
+                     <span class="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">Popular</span>
+                     <span class="absolute top-2 right-2 bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded-full">DF</span>
+                 </div>
+                 <div class="p-4 bg-yellow-400 text-center">
+                     <h3 class="font-bold text-sm">JERK CHICKEN WITH BAKED PLANTAIN & HOMEMADE JERK SAUCE</h3>
+                     <p class="text-xs mt-1">406 kcal | 40.2g protein</p>
+                     <div class="flex items-center justify-center mt-3">
+                         <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="decreaseQuantity('Jerk Chicken')">-</button>
+                         <span id="quantity-Jerk Chicken" class="mx-3 text-lg">0</span>
+                         <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="increaseQuantity('Jerk Chicken')">+</button>
+                     </div>
+                     <p class="mt-2 text-xs underline cursor-pointer" onclick="openModal('Jerk Chicken', '/images/food.jpg', 'A delicious Jamaican dish featuring grilled jerk chicken, served with baked plantain and homemade jerk sauce. Packed with 40.2g protein!', '406 kcal | 40.2g protein')">More Info</p>
+                 </div>
+             </div>
+     
+             <!-- Card 2 -->
+             <div class="bg-yellow-400 shadow-lg rounded-lg overflow-hidden">
+                 <div class="relative">
+                     <img src="/images/food3.jpg" alt="THAI COCONUT CURRY" class="w-full h-40 object-cover">
+                     <span class="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">Special</span>
+                     <span class="absolute top-2 right-2 bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded-full">DF</span>
+                 </div>
+                 <div class="p-4 bg-yellow-400 text-center">
+                     <h3 class="font-bold text-sm">THAI COCONUT CURRY</h3>
+                     <p class="text-xs mt-1">406 kcal | 40.2g protein</p>
+                     <div class="flex items-center justify-center mt-3">
+                         <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="decreaseQuantity('THAI COCONUT CURRY')">-</button>
+                         <span id="quantity-THAI COCONUT CURRY" class="mx-3 text-lg">0</span>
+                         <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="increaseQuantity('THAI COCONUT CURRY')">+</button>
+                     </div>
+                     <p class="mt-2 text-xs underline cursor-pointer" onclick="openModal('THAI COCONUT CURRY', '/images/food3.jpg', 'A special dish with unique flavors and high protein content.', '406 kcal | 40.2g protein')">More Info</p>
+                 </div>
+             </div>
+     
+     
+             <div class="bg-yellow-400 shadow-lg rounded-lg overflow-hidden">
+                 <div class="relative">
+                     <img src="/images/food4.webp" alt="JERK CHICKEN" class="w-full h-40 object-cover">
+                     <span class="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">Special</span>
+                     <span class="absolute top-2 right-2 bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded-full">DF</span>
+                 </div>
+                 <div class="p-4 bg-yellow-400 text-center">
+                     <h3 class="font-bold text-sm">JERK CHICKEN</h3>
+                     <p class="text-xs mt-1">406 kcal | 40.2g protein</p>
+                     <div class="flex items-center justify-center mt-3">
+                         <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="decreaseQuantity('JERK CHICKEN')">-</button>
+                         <span id="quantity-JERK CHICKEN" class="mx-3 text-lg">0</span>
+                         <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="increaseQuantity('JERK CHICKEN')">+</button>
+                     </div>
+                     <p class="mt-2 text-xs underline cursor-pointer" onclick="openModal('JERK CHICKEN', '/images/food4.webp', 'A special dish with unique flavors and high protein content.', '406 kcal | 40.2g protein')">More Info</p>
+                 </div>
+             </div>
+     
+     
+             <div class="bg-yellow-400 shadow-lg rounded-lg overflow-hidden">
+                 <div class="relative">
+                     <img src="/images/food5.jpg" alt="BEEF NASI GORENG" class="w-full h-40 object-cover">
+                     <span class="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">Special</span>
+                     <span class="absolute top-2 right-2 bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded-full">DF</span>
+                 </div>
+                 <div class="p-4 bg-yellow-400 text-center">
+                     <h3 class="font-bold text-sm">BEEF NASI GORENG</h3>
+                     <p class="text-xs mt-1">406 kcal | 40.2g protein</p>
+                     <div class="flex items-center justify-center mt-3">
+                         <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="decreaseQuantity('BEEF NASI GORENG')">-</button>
+                         <span id="quantity-BEEF NASI GORENG" class="mx-3 text-lg">0</span>
+                         <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="increaseQuantity('BEEF NASI GORENG')">+</button>
+                     </div>
+                     <p class="mt-2 text-xs underline cursor-pointer" onclick="openModal('BEEF NASI GORENG', '/images/food4.webp', 'A special dish with unique flavors and high protein content.', '406 kcal | 40.2g protein')">More Info</p>
+                 </div>
+             </div>
+     
+     
+     
+     
+         </div>
+     </div>
+
+
+
+
+      <!-- Meal Cards breakfast Section -->
+      <div>
+
+        <h1 class="text-3xl font-bold text-[#FF5722] text-center">Breakfast</h1>
+        <div class="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-yellow-400 shadow-lg rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="/images/food6.jpeg" alt="THAI CURRY" class="w-full h-40 object-cover">
+                    <span class="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">Popular</span>
+                    <span class="absolute top-2 right-2 bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded-full">DF</span>
                 </div>
-                <p class="mt-2 text-xs underline cursor-pointer" onclick="openModal('Food 2', '/images/food3.jpg', 'A special dish with unique flavors and high protein content.', '406 kcal | 40.2g protein')">More Info</p>
+                <div class="p-4 bg-yellow-400 text-center">
+                    <h3 class="font-bold text-sm">THAI CURRY</h3>
+                    <p class="text-xs mt-1">406 kcal | 40.2g protein</p>
+                    <div class="flex items-center justify-center mt-3">
+                        <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="decreaseQuantity('THAI CURRY')">-</button>
+                        <span id="quantity-THAI CURRY" class="mx-3 text-lg">0</span>
+                        <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="increaseQuantity('THAI CURRY')">+</button>
+                    </div>
+                    <p class="mt-2 text-xs underline cursor-pointer" onclick="openModal('THAI COCONUT CURRY', '/images/food6.jpeg', 'A delicious Jamaican dish featuring grilled THAI CURRY, served with baked plantain and homemade jerk sauce. Packed with 40.2g protein!', '406 kcal | 40.2g protein')">More Info</p>
+                </div>
             </div>
+    
+            <!-- Card 2 -->
+            <div class="bg-yellow-400 shadow-lg rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="/images/food3.jpg" alt="TURKISH LAMB KOFTE" class="w-full h-40 object-cover">
+                    <span class="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">Special</span>
+                    <span class="absolute top-2 right-2 bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded-full">DF</span>
+                </div>
+                <div class="p-4 bg-yellow-400 text-center">
+                    <h3 class="font-bold text-sm">TURKISH LAMB KOFTE</h3>
+                    <p class="text-xs mt-1">406 kcal | 40.2g protein</p>
+                    <div class="flex items-center justify-center mt-3">
+                        <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="decreaseQuantity('TURKISH LAMB KOFTE')">-</button>
+                        <span id="quantity-TURKISH LAMB KOFTE" class="mx-3 text-lg">0</span>
+                        <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="increaseQuantity('TURKISH LAMB KOFTE')">+</button>
+                    </div>
+                    <p class="mt-2 text-xs underline cursor-pointer" onclick="openModal('TURKISH LAMB KOFTE', '/images/food3.jpg', 'A special dish with unique flavors and high protein content.', '406 kcal | 40.2g protein')">More Info</p>
+                </div>
+            </div>
+    
+    
+            <div class="bg-yellow-400 shadow-lg rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="/images/food4.webp" alt="BEEF GORENG" class="w-full h-40 object-cover">
+                    <span class="absolute top-2 left-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">Special</span>
+                    <span class="absolute top-2 right-2 bg-blue-400 text-white text-xs font-bold px-2 py-1 rounded-full">DF</span>
+                </div>
+                <div class="p-4 bg-yellow-400 text-center">
+                    <h3 class="font-bold text-sm">BEEF GORENG</h3>
+                    <p class="text-xs mt-1">406 kcal | 40.2g protein</p>
+                    <div class="flex items-center justify-center mt-3">
+                        <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="decreaseQuantity('BEEF GORENG')">-</button>
+                        <span id="quantity-BEEF GORENG" class="mx-3 text-lg">0</span>
+                        <button class="bg-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-lg" onclick="increaseQuantity('BEEF GORENG')">+</button>
+                    </div>
+                    <p class="mt-2 text-xs underline cursor-pointer" onclick="openModal('BEEF GORENG', '/images/food4.webp', 'A special dish with unique flavors and high protein content.', '406 kcal | 40.2g protein')">More Info</p>
+                </div>
+            </div>
+    
+    
+           
+    
+    
+    
+    
         </div>
     </div>
 
